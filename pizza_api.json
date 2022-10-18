@@ -1,0 +1,166 @@
+{
+	"banners": [
+		{
+			"imageUrl": "https://cdn.papajohns.ru//images/banners/a11d7332c41d80fa427dc2a33fd07994.webp"
+		},
+		{
+			"imageUrl": "https://cdn.papajohns.ru//images/banners/d425dc8cf720302c81efd9e2d48d14ac.webp"
+		},
+		{
+			"imageUrl": "https://cdn.papajohns.ru//images/banners/d1ec54506692dc599f62aec04750d1c2.webp"
+		}
+	],
+	"menu": [
+		{
+			"title": "Пицца",
+			"items" : [
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/cart/7d74dbd441a4c253072c53eb91dedfa9.webp",
+					"title": "Ветчина и грибы",
+					"description": "Пицца с ветчиной и грибами",
+					"price": "от 350 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/92bc6bca0b58b92c4bad051716d7af4d.webp",
+					"title": "Баварская",
+					"description": "Пицца с колбасками баварскими и сыром",
+					"price": "от 350 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/87c00fa870fd5563759f5b6f36ff3d98.webp",
+					"title": "С ананасом и беконом",
+					"description": "Пицца с ананасами, беконом и сыром",
+					"price": "от 350 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/717c70cd1e5ddce84459cd528dd845c9.webp",
+					"title": "Цыпленок грин",
+					"description": "Пицца цыпленком и прочим",
+					"price": "от 350 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/159a80338bf7e2745d8efb3e3a8e05ff.webp",
+					"title": "Пепперони грин",
+					"description": "Пицца с Пепперони, сыром и тестом",
+					"price": "от 350 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/fd3074cffac20d9e9c31c611d4e28682.webp",
+					"title": "Чеддер Чизбургер",
+					"description": "Пицца с сыром и мясом",
+					"price": "от 350 руб."
+				}
+			]
+		},
+		{
+			"title": "Комбо",
+			"items" : [
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/d0376e0f44a04db316449bc71eb4d541.webp",
+					"title": "Комбо 1",
+					"description": "",
+					"price": "от 850 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/aeef9f2ab0ef2382a80b591fd52e4258.webp",
+					"title": "Комбо 2",
+					"description": "",
+					"price": "от 850 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/f749f5303cfef6fb80550baecea85237.webp",
+					"title": "Комбо 3",
+					"description": "",
+					"price": "от 850 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/d0376e0f44a04db316449bc71eb4d541.webp",
+					"title": "Комбо 4",
+					"description": "",
+					"price": "от 850 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/aeef9f2ab0ef2382a80b591fd52e4258.webp",
+					"title": "Комбо 5",
+					"description": "",
+					"price": "от 850 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/f749f5303cfef6fb80550baecea85237.webp",
+					"title": "Комбо 6",
+					"description": "",
+					"price": "от 850 руб."
+				}
+			]
+		},
+		{
+			"title": "Напитки",
+			"items" : [
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/2e33869fb1e8e971875715cb7b5870ad.webp",
+					"title": "Тархун",
+					"description": "",
+					"price": "от 100 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/47303f6f33f6a55bee898ce4a4f4a9a2.webp",
+					"title": "Лимонад",
+					"description": "",
+					"price": "от 100 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/1ad8481ee47a0de3e92d67096bed6c8e.webp",
+					"title": "Дюшес",
+					"description": "",
+					"price": "от 100 руб."
+				}
+			]
+		},
+		{
+			"title": "Десерты",
+			"items" : [
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/8dac0f0f5c7d52c5c8ae5b3c24fe6c65.webp",
+					"title": "Сырники",
+					"description": "",
+					"price": "от 100 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/ece7f10c5f430376907654552a342163.webp",
+					"title": "Мороженое",
+					"description": "",
+					"price": "от 100 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/Sweet%20knots.jpg",
+					"title": "Узелки",
+					"description": "",
+					"price": "от 100 руб."
+				}
+			]
+		},
+		{
+			"title": "Соусы",
+			"items" : [
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/cf35a982e6f77737feda8a6f3f3d89af.webp",
+					"title": "Барбекю",
+					"description": "",
+					"price": "от 50 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/bebb8b53e4ce77d6833eecaead805dce.webp",
+					"title": "Сырный",
+					"description": "",
+					"price": "от 50 руб."
+				},
+				{
+					"imageUrl": "https://cdn.papajohns.ru//images/catalog/thumbs/full/bebb8b53e4ce77d6833eecaead805dce.webp",
+					"title": "Майонез",
+					"description": "",
+					"price": "от 50 руб."
+				}
+			]
+		}
+	]
+}
