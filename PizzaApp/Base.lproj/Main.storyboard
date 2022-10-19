@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,20 +13,86 @@
         <scene sceneID="hRf-Ss-oTh">
             <objects>
                 <tableViewController id="QBH-SG-trC" customClass="MainPageTableViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="RaJ-lo-M1p">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="RaJ-lo-M1p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemTableViewCell" rowHeight="187" id="U2L-jd-Q4l" customClass="MenuItemTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="187"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BannerTableViewCell" rowHeight="130" id="7lf-il-6Xs" customClass="BannerTableViewCell" customModule="PizzaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="32" width="414" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7lf-il-6Xs" id="WGo-F5-4JH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yAi-up-0Zw">
+                                            <rect key="frame" x="20" y="11" width="374" height="108"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="Tpz-X0-WlI"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hKJ-Tk-huP">
+                                                <size key="itemSize" width="300" height="130"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCollectionViewCell" id="mbo-gn-Gah" customClass="BannerCollectionViewCell" customModule="PizzaApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-11" width="300" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Acj-wJ-Grf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ojN-j2-G27">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="130" id="ReM-s9-q1g"/>
+                                                                    <constraint firstAttribute="width" constant="300" id="yX6-2H-IWx"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="ojN-j2-G27" firstAttribute="leading" secondItem="Acj-wJ-Grf" secondAttribute="leading" id="dJL-kc-VBb"/>
+                                                            <constraint firstItem="ojN-j2-G27" firstAttribute="top" secondItem="Acj-wJ-Grf" secondAttribute="top" id="ddz-Z5-Qft"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ojN-j2-G27" secondAttribute="bottom" id="meU-yh-diV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ojN-j2-G27" secondAttribute="trailing" id="mgb-Yq-dah"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </collectionViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="bannerImageView" destination="ojN-j2-G27" id="F5B-da-NcV"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yAi-up-0Zw" firstAttribute="top" secondItem="WGo-F5-4JH" secondAttribute="topMargin" id="Bbo-ot-9Zk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yAi-up-0Zw" secondAttribute="trailing" id="Yag-fH-kUM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yAi-up-0Zw" secondAttribute="bottom" id="ffY-Du-dY8"/>
+                                        <constraint firstItem="yAi-up-0Zw" firstAttribute="leading" secondItem="WGo-F5-4JH" secondAttribute="leadingMargin" id="iln-6S-X0Z"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="collectionView" destination="yAi-up-0Zw" id="aeZ-1D-5vj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishTableViewCell" rowHeight="187" id="U2L-jd-Q4l" customClass="DishTableViewCell" customModule="PizzaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="162" width="414" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2L-jd-Q4l" id="37g-46-G9q">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-Nd-RBE">
-                                            <rect key="frame" x="20" y="35" width="132" height="132"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yf5-Nd-RBE">
+                                            <rect key="frame" x="0.0" y="35" width="132" height="132"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="132" id="LDe-g9-4t3"/>
                                                 <constraint firstAttribute="height" constant="132" id="UEn-Nc-UKt"/>
@@ -77,11 +144,13 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Yf5-Nd-RBE" secondAttribute="bottom" constant="9" id="axQ-GH-1NK"/>
                                         <constraint firstItem="Yf5-Nd-RBE" firstAttribute="top" secondItem="37g-46-G9q" secondAttribute="topMargin" constant="24" id="dem-sa-Z8g"/>
                                         <constraint firstItem="bxZ-2d-26N" firstAttribute="leading" secondItem="Yf5-Nd-RBE" secondAttribute="trailing" constant="32" id="dp0-TF-gMr"/>
+                                        <constraint firstItem="pYx-Yh-Wgf" firstAttribute="leading" secondItem="Yf5-Nd-RBE" secondAttribute="trailing" constant="158" id="eFy-hc-GT2"/>
                                         <constraint firstAttribute="trailing" secondItem="pYx-Yh-Wgf" secondAttribute="trailing" constant="24" id="lG4-O9-ozl"/>
                                         <constraint firstAttribute="trailing" secondItem="bxZ-2d-26N" secondAttribute="trailing" constant="16" id="oF0-uV-6AH"/>
                                         <constraint firstAttribute="trailing" secondItem="tmY-14-ocj" secondAttribute="trailing" constant="16" id="scm-tB-Dq6"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="itemDescriptionLabel" destination="tmY-14-ocj" id="F8J-y2-LmL"/>
                                     <outlet property="itemImageView" destination="Yf5-Nd-RBE" id="O4D-CM-6Hf"/>
@@ -106,8 +175,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fst-XP-5Kf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S5k-9M-hwQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="S5k-9M-hwQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -123,6 +192,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

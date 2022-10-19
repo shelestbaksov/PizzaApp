@@ -7,14 +7,25 @@
 
 import Foundation
 
+//[[]]
 
-//enum CellModel {
-//    case collectionView(models: [Banner])
-//    case listView(models: [MenuItem])
-//}
+enum ListSection {
+    case banners([Banner])
+    case category([MenuSection])
+    case dishes([Dish])
+    
+    var items: [Any] {
+        switch self {
+        case .banners(let banners):
+            return banners
+        case .category(let category):
+            return category
+        case .dishes(let dishes):
+            return dishes
+        }
+    }
 
-//let response = ["banners": [Banner], "menu": [Menu]]
-
+}
 
 struct APIResponse: Codable {
     let banners: [Banner]

@@ -15,7 +15,7 @@ enum MenuServiceError: Error {
 
 class MenuService {
     
-    func fetchMenu(completion: @escaping (Result<[MenuSection], Error>) -> Void) {
+    func fetchMenu(completion: @escaping (Result<APIResponse, Error>) -> Void) {
         guard let url = URL(string: "https://raw.githubusercontent.com/shelestbaksov/PizzaApp/main/pizza_api.json") else {
             completion(.failure(MenuServiceError.invalidURL))
             return
@@ -28,9 +28,8 @@ class MenuService {
             
             do {
                 let resultDict = try JSONDecoder().decode(APIResponse.self, from: menuData)
-                let menuSections = resultDict.menu
                 DispatchQueue.main.async {
-                    completion(.success(menuSections))
+                    completion(.success(resultDict))
                 }
             } catch {
                 completion(.failure(MenuServiceError.decodingError))
