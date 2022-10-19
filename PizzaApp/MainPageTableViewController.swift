@@ -11,6 +11,7 @@ class MainPageTableViewController: UITableViewController {
     
     private let service = MenuService()
     private var sections: [[Any]] = []
+    private var menuSections: [MenuSection] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +24,20 @@ class MainPageTableViewController: UITableViewController {
                 
                 let newSections: [[Any]] = [
                     [resultDict.banners],
-                    //[resultDict.menu],
                     resultDict.menu.reduce([]) { $0 + $1.items }
                 ]
                 
+                
                 DispatchQueue.main.async {
                     self?.sections = newSections
+                    self?.menuSections = resultDict.menu
                     self?.tableView.reloadData()
                 }
             case .failure(let error):
                 print(error)
             }
         }
+        tableView.register(DishesHeader.self, forHeaderFooterViewReuseIdentifier: "Header")
     }
 
     // MARK: - Table view data source
@@ -94,5 +97,26 @@ class MainPageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "Header") as? DishesHeader else { fatalError() }
+            header.configCollectionView()
+            header.backgroundColor = .clear
+            header.menuData = menuSections
+            
+            return header
+        } else {
+            return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 50
+        } else {
+            return 0
+        }
     }
 }
