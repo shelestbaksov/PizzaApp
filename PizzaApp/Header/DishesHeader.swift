@@ -19,10 +19,10 @@ class DishesHeader: UITableViewHeaderFooterView {
         
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = CGSize(width: 60, height: 60)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 40)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .systemGroupedBackground
         
         collectionView.delegate = self
         collectionView.dataSource = self

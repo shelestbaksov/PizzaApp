@@ -10,6 +10,9 @@
 		4042BCA129000FAA00705147 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCA029000FAA00705147 /* BannerCollectionViewCell.swift */; };
 		4042BCB629004F2600705147 /* DishesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCB529004F2600705147 /* DishesHeader.swift */; };
 		4042BCB82900503600705147 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCB72900503600705147 /* MenuCollectionViewCell.swift */; };
+		4042BCBC290141B400705147 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCBB290141B400705147 /* BasketViewController.swift */; };
+		4042BCBE290141DD00705147 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCBD290141DD00705147 /* LocationViewController.swift */; };
+		4042BCC1290141FC00705147 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4042BCC0290141FC00705147 /* ProfileViewController.swift */; };
 		40B0FA1528FF1B050034EB78 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B0FA1428FF1B050034EB78 /* MenuService.swift */; };
 		40B0FA1828FFF9790034EB78 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B0FA1728FFF9790034EB78 /* BannerTableViewCell.swift */; };
 		40EA3CE028FEA47200B5641B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EA3CDF28FEA47200B5641B /* AppDelegate.swift */; };
@@ -26,6 +29,9 @@
 		4042BCA029000FAA00705147 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		4042BCB529004F2600705147 /* DishesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesHeader.swift; sourceTree = "<group>"; };
 		4042BCB72900503600705147 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		4042BCBB290141B400705147 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		4042BCBD290141DD00705147 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		4042BCC0290141FC00705147 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		40B0FA1428FF1B050034EB78 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		40B0FA1728FFF9790034EB78 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		40EA3CDC28FEA47200B5641B /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4042BCB929013DFB00705147 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4042BCB529004F2600705147 /* DishesHeader.swift */,
+				4042BCB72900503600705147 /* MenuCollectionViewCell.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4042BCBA2901418E00705147 /* FakeViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4042BCBB290141B400705147 /* BasketViewController.swift */,
+				4042BCBD290141DD00705147 /* LocationViewController.swift */,
+				4042BCC0290141FC00705147 /* ProfileViewController.swift */,
+			);
+			path = FakeViewControllers;
+			sourceTree = "<group>";
+		};
+		4042BCC229014D0F00705147 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				40B0FA1428FF1B050034EB78 /* MenuService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		40B0FA1628FFF9410034EB78 /* BannerTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +112,11 @@
 		40EA3CDE28FEA47200B5641B /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
-				40B0FA1628FFF9410034EB78 /* BannerTableViewCell */,
 				40EA3CF928FEC1E100B5641B /* Models */,
+				4042BCBA2901418E00705147 /* FakeViewControllers */,
+				40B0FA1628FFF9410034EB78 /* BannerTableViewCell */,
+				4042BCB929013DFB00705147 /* Header */,
+				4042BCC229014D0F00705147 /* Services */,
 				40EA3CDF28FEA47200B5641B /* AppDelegate.swift */,
 				40EA3CE128FEA47200B5641B /* SceneDelegate.swift */,
 				40EA3CE528FEA47200B5641B /* Main.storyboard */,
@@ -89,9 +125,6 @@
 				40EA3CED28FEA47600B5641B /* Info.plist */,
 				40EA3D0728FEFFC900B5641B /* MainPageTableViewController.swift */,
 				40EA3D0928FF008C00B5641B /* DishTableViewCell.swift */,
-				40B0FA1428FF1B050034EB78 /* MenuService.swift */,
-				4042BCB529004F2600705147 /* DishesHeader.swift */,
-				4042BCB72900503600705147 /* MenuCollectionViewCell.swift */,
 			);
 			path = PizzaApp;
 			sourceTree = "<group>";
@@ -178,11 +211,14 @@
 				4042BCB82900503600705147 /* MenuCollectionViewCell.swift in Sources */,
 				40EA3CE028FEA47200B5641B /* AppDelegate.swift in Sources */,
 				40B0FA1828FFF9790034EB78 /* BannerTableViewCell.swift in Sources */,
+				4042BCBE290141DD00705147 /* LocationViewController.swift in Sources */,
 				40EA3CE228FEA47200B5641B /* SceneDelegate.swift in Sources */,
 				40B0FA1528FF1B050034EB78 /* MenuService.swift in Sources */,
 				40EA3CF828FEBEB200B5641B /* Models.swift in Sources */,
 				4042BCB629004F2600705147 /* DishesHeader.swift in Sources */,
+				4042BCBC290141B400705147 /* BasketViewController.swift in Sources */,
 				40EA3D0828FEFFC900B5641B /* MainPageTableViewController.swift in Sources */,
+				4042BCC1290141FC00705147 /* ProfileViewController.swift in Sources */,
 				4042BCA129000FAA00705147 /* BannerCollectionViewCell.swift in Sources */,
 				40EA3D0A28FF008C00B5641B /* DishTableViewCell.swift in Sources */,
 			);

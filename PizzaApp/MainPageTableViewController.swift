@@ -62,12 +62,7 @@ class MainPageTableViewController: UITableViewController {
             cell.selectionStyle = .none
             cell.banners = banners
             return cell
-        }
-//        else if let menuSections = item as? [MenuSection] {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "2", for: indexPath)
-//            return cell
-//        }
-        else if let dish = item as? Dish {
+        } else if let dish = item as? Dish {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: DishTableViewCell.identifier,
                 for: indexPath

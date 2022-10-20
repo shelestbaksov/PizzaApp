@@ -4,22 +4,24 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Page Table View Controller-->
+        <!--Меню-->
         <scene sceneID="hRf-Ss-oTh">
             <objects>
                 <tableViewController id="QBH-SG-trC" customClass="MainPageTableViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="RaJ-lo-M1p">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="RaJ-lo-M1p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BannerTableViewCell" rowHeight="130" id="7lf-il-6Xs" customClass="BannerTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="32" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7lf-il-6Xs" id="WGo-F5-4JH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -79,13 +81,13 @@
                                         <constraint firstItem="yAi-up-0Zw" firstAttribute="leading" secondItem="WGo-F5-4JH" secondAttribute="leadingMargin" id="iln-6S-X0Z"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <connections>
                                     <outlet property="collectionView" destination="yAi-up-0Zw" id="aeZ-1D-5vj"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishTableViewCell" rowHeight="187" id="U2L-jd-Q4l" customClass="DishTableViewCell" customModule="PizzaApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="162" width="414" height="187"/>
+                                <rect key="frame" x="0.0" y="174.5" width="414" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2L-jd-Q4l" id="37g-46-G9q">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
@@ -164,32 +166,138 @@
                             <outlet property="delegate" destination="QBH-SG-trC" id="mkD-gg-wES"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Меню" id="IRv-Ks-pzo">
+                        <imageReference key="image" image="flame.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemRedColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="rfN-h2-v4g"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RY1-oj-rWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.59420289855075" y="-121.20535714285714"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="-121.20535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Tv-XH-3Hf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fst-XP-5Kf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="S5k-9M-hwQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S5k-9M-hwQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QBH-SG-trC" kind="relationship" relationship="rootViewController" id="EWc-eY-WBv"/>
+                        <segue destination="1vZ-H9-oaq" kind="relationship" relationship="rootViewController" id="EWc-eY-WBv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKz-cG-A4i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1.4492753623188408" y="-121.20535714285714"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="X5R-KQ-8Pp">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1vZ-H9-oaq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QLJ-gD-XQ0"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ii8-0L-q75">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QBH-SG-trC" kind="relationship" relationship="viewControllers" id="Er0-tY-cag"/>
+                        <segue destination="bod-g4-4me" kind="relationship" relationship="viewControllers" id="UOA-yb-PSe"/>
+                        <segue destination="L7z-p8-0eY" kind="relationship" relationship="viewControllers" id="8Ns-uZ-m8s"/>
+                        <segue destination="SR5-Uw-80y" kind="relationship" relationship="viewControllers" id="hOI-8i-6GX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLR-dL-FyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.59420289855075" y="-121.20535714285714"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="fBf-Z0-pk8">
+            <objects>
+                <viewController id="bod-g4-4me" customClass="ProfileViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZgS-2a-qNs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pxr-fW-sHW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" id="5tb-Oz-3Wd">
+                        <imageReference key="image" image="person.crop.square" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuk-HW-86a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="587"/>
+        </scene>
+        <!--Локация-->
+        <scene sceneID="KMd-Cq-LTn">
+            <objects>
+                <viewController id="L7z-p8-0eY" customClass="LocationViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zfq-ne-cjA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XWd-6r-51R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Локация" id="GlY-fw-wqb">
+                        <imageReference key="image" image="location" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcQ-af-m1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="587"/>
+        </scene>
+        <!--Корзина-->
+        <scene sceneID="YNc-Z4-LTh">
+            <objects>
+                <viewController id="SR5-Uw-80y" customClass="BasketViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcy-gJ-bmn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YGX-tu-wfU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Корзина" id="Ysg-Rj-k3m">
+                        <imageReference key="image" image="tray" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                                <color systemColor="systemPinkColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmT-P7-ksR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="573"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -198,6 +306,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
