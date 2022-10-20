@@ -155,8 +155,8 @@
                             <outlet property="delegate" destination="QBH-SG-trC" id="mkD-gg-wES"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Меню" id="IRv-Ks-pzo">
-                        <imageReference key="image" image="flame.fill" catalog="system" renderingMode="hierarchical">
+                    <tabBarItem key="tabBarItem" title="Меню" selectedImage="Burger" id="IRv-Ks-pzo">
+                        <imageReference key="image" image="Burger" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemPinkColor"/>
                                 <color systemColor="systemPinkColor"/>
@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="-121.20535714285714"/>
         </scene>
-        <!--Профиль-->
+        <!--Контакты-->
         <scene sceneID="fBf-Z0-pk8">
             <objects>
                 <viewController id="bod-g4-4me" customClass="ProfileViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,8 +219,8 @@
                         <viewLayoutGuide key="safeArea" id="pxr-fW-sHW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Профиль" id="5tb-Oz-3Wd">
-                        <imageReference key="image" image="person.crop.square" catalog="system" renderingMode="hierarchical">
+                    <tabBarItem key="tabBarItem" title="Контакты" id="5tb-Oz-3Wd">
+                        <imageReference key="image" image="Pin" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemPinkColor"/>
                                 <color systemColor="systemPinkColor"/>
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="587"/>
         </scene>
-        <!--Локация-->
+        <!--Профиль-->
         <scene sceneID="KMd-Cq-LTn">
             <objects>
                 <viewController id="L7z-p8-0eY" customClass="LocationViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,8 +243,8 @@
                         <viewLayoutGuide key="safeArea" id="XWd-6r-51R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Локация" id="GlY-fw-wqb">
-                        <imageReference key="image" image="location" catalog="system" renderingMode="hierarchical">
+                    <tabBarItem key="tabBarItem" title="Профиль" id="GlY-fw-wqb">
+                        <imageReference key="image" image="Pers" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemPinkColor"/>
                                 <color systemColor="systemPinkColor"/>
@@ -268,7 +268,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Корзина" id="Ysg-Rj-k3m">
-                        <imageReference key="image" image="tray" catalog="system" renderingMode="hierarchical">
+                        <imageReference key="image" image="Basket" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemPinkColor"/>
                                 <color systemColor="systemPinkColor"/>
@@ -283,10 +283,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="flame.fill" catalog="system" width="108" height="128"/>
-        <image name="location" catalog="system" width="128" height="118"/>
-        <image name="person.crop.square" catalog="system" width="128" height="114"/>
-        <image name="tray" catalog="system" width="128" height="88"/>
+        <image name="Basket" width="20" height="20"/>
+        <image name="Burger" width="20" height="20"/>
+        <image name="Pers" width="18" height="19"/>
+        <image name="Pin" width="16" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
