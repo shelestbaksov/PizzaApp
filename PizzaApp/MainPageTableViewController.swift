@@ -105,7 +105,6 @@ class MainPageTableViewController: UITableViewController {
                 
                 let numberOfItemsInSectionsBeforeSelected: Int = self.menuSections.prefix(selectedIndex).reduce(0) { $0 + $1.items.count }
                 
-                print(numberOfItemsInSectionsBeforeSelected)
                 self.tableView.scrollToRow(at: IndexPath(row: numberOfItemsInSectionsBeforeSelected, section: section), at: .top, animated: true)
             }
             return header

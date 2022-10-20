@@ -13,7 +13,6 @@ class DishesHeader: UITableViewHeaderFooterView {
     lazy var collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     
     var menuData: [MenuSection] = []
-    
     var onMenuSectionSelected: ((Int) -> ())?
     
     func configCollectionView() -> Void {
@@ -26,6 +25,8 @@ class DishesHeader: UITableViewHeaderFooterView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .systemGroupedBackground
         
+        collectionView.allowsMultipleSelection = false
+        collectionView.allowsSelection = true
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -48,10 +49,12 @@ extension DishesHeader: UICollectionViewDelegateFlowLayout, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionViewCell", for: indexPath) as? MenuCollectionViewCell else { fatalError() }
         let cellData = menuData[indexPath.row]
         cell.configureButton(with: cellData)
-        cell.onButtonTap = { [weak self] in
-            self?.onMenuSectionSelected?(indexPath.item)
-        }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        onMenuSectionSelected?(indexPath.item)
     }
 }
 

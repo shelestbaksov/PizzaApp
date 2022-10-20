@@ -9,12 +9,11 @@ import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
     var button: UIButton = UIButton()
-
-    var onButtonTap: (() -> ())?
     
     func configureButton(with menuSection: MenuSection) -> Void {
         
         addSubview(button)
+        button.isUserInteractionEnabled = false
         button.setTitle(menuSection.title, for: .normal)
         button.setTitleColor(.myPink, for: .normal)
         button.backgroundColor = .clear
@@ -25,21 +24,19 @@ class MenuCollectionViewCell: UICollectionViewCell {
         button.clipsToBounds = true
         button.titleLabel?.font = .systemFont(ofSize: 14)
         
-        button.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside);
         setButtonConstraintes()
     }
-    
-    //target functions
-    @objc func handleButtonTap()
-    {
-        if button.backgroundColor == .clear {
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = .myPink
-        } else {
-            button.setTitleColor(.myPink, for: .normal)
-            button.backgroundColor = .clear
+
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = .myPink
+            } else {
+                button.setTitleColor(.myPink, for: .normal)
+                button.backgroundColor = .clear
+            }
         }
-        onButtonTap?()
     }
     
     func setButtonConstraintes() {
