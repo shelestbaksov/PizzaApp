@@ -10,12 +10,12 @@ import UIKit
 class MenuCollectionViewCell: UICollectionViewCell {
     var button: UIButton = UIButton()
 
+    var onButtonTap: (() -> ())?
+    
     func configureButton(with menuSection: MenuSection) -> Void {
         
         addSubview(button)
-        
         button.setTitle(menuSection.title, for: .normal)
-        button.setTitleColor(.white, for: .highlighted)
         button.setTitleColor(.myPink, for: .normal)
         button.backgroundColor = .clear
         button.layer.borderWidth = 1
@@ -25,32 +25,22 @@ class MenuCollectionViewCell: UICollectionViewCell {
         button.clipsToBounds = true
         button.titleLabel?.font = .systemFont(ofSize: 14)
         
-        button.addTarget(self, action: #selector(holdRelease), for: .touchUpInside);
-//        button.addTarget(self, action: #selector(heldDown), for: .touchDown)
-//        button.addTarget(self, action: #selector(buttonHeldAndReleased), for: .touchDragExit)
-        
+        button.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside);
         setButtonConstraintes()
     }
     
     //target functions
-//    @objc func heldDown()
-//    {
-//        button.backgroundColor = .myPink
-//    }
-
-    @objc func holdRelease()
+    @objc func handleButtonTap()
     {
         if button.backgroundColor == .clear {
+            button.setTitleColor(.white, for: .normal)
             button.backgroundColor = .myPink
         } else {
+            button.setTitleColor(.myPink, for: .normal)
             button.backgroundColor = .clear
         }
-        print(button.state)
+        onButtonTap?()
     }
-
-//    @objc func buttonHeldAndReleased(){
-//        button.backgroundColor = .myPink
-//    }
     
     func setButtonConstraintes() {
         button.translatesAutoresizingMaskIntoConstraints = false

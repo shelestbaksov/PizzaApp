@@ -14,12 +14,14 @@ class DishesHeader: UITableViewHeaderFooterView {
     
     var menuData: [MenuSection] = []
     
+    var onMenuSectionSelected: ((Int) -> ())?
+    
     func configCollectionView() -> Void {
         addSubview(collectionView)
         
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = CGSize(width: 60, height: 60)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 20)
         
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .systemGroupedBackground
@@ -46,6 +48,9 @@ extension DishesHeader: UICollectionViewDelegateFlowLayout, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCollectionViewCell", for: indexPath) as? MenuCollectionViewCell else { fatalError() }
         let cellData = menuData[indexPath.row]
         cell.configureButton(with: cellData)
+        cell.onButtonTap = { [weak self] in
+            self?.onMenuSectionSelected?(indexPath.item)
+        }
         return cell
     }
 }

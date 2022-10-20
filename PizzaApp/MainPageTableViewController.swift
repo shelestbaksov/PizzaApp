@@ -80,18 +80,18 @@ class MainPageTableViewController: UITableViewController {
             cell.selectionStyle = .none
             cell.layer.cornerRadius = 20
             cell.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-            cell.itemTitleLabel.text = dish.title
+            
             cell.itemDescriptionLabel.text = dish.description
+            cell.itemTitleLabel.text = dish.title
             cell.itemPriceLabel.text = dish.price
+            cell.itemPriceLabel.layer.borderWidth = 1
+            cell.itemPriceLabel.layer.cornerRadius = 10
+            cell.itemPriceLabel.layer.borderColor = CGColor(red: 253/255, green: 58/255, blue: 105/255, alpha: 1)
             
             return cell
         } else {
             fatalError()
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -100,7 +100,14 @@ class MainPageTableViewController: UITableViewController {
             header.configCollectionView()
             header.backgroundColor = .clear
             header.menuData = menuSections
-            
+            header.onMenuSectionSelected = { [weak self] selectedIndex in
+                guard let self = self else { return }
+                
+                let numberOfItemsInSectionsBeforeSelected: Int = self.menuSections.prefix(selectedIndex).reduce(0) { $0 + $1.items.count }
+                
+                print(numberOfItemsInSectionsBeforeSelected)
+                self.tableView.scrollToRow(at: IndexPath(row: numberOfItemsInSectionsBeforeSelected, section: section), at: .top, animated: true)
+            }
             return header
         } else {
             return nil
@@ -109,7 +116,7 @@ class MainPageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 1 {
-            return 50
+            return 60
         } else {
             return 0
         }
